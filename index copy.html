@@ -10,17 +10,6 @@
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
       rel="stylesheet" />
-    <style>
-      .a4-paper {
-        width: 595px;
-        height: 842px;
-        background-color: white;
-        border: 3px solid #ccc;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin: 0 auto;
-        padding: 20px;
-      }
-    </style>
   </head>
   <body class="container mt-3 h-full w-full mx-auto">
     <div className="flex m-auto">
@@ -34,13 +23,12 @@
           </div>
         </header>
         <!-- Tabel -->
-        <table class="m-auto">
+        <table class="m-auto" style="width: 600px; height: 490px">
           <!-- Baris Tabel -->
-          <tbody class="h-32 w-32">
+          <tbody class="h-20 w-24">
             <tr>
               <td class="border">
                 <input
-                  class=""
                   type="file"
                   id="file1"
                   name="file1"
@@ -170,9 +158,9 @@
           onclick="cetakHalaman()">
           Cetak
         </button>
-        <section class="flex justify-end">
+        <div class="flex justify-end items-center mt-10">
           <div
-            class="absolute flex flex-col gap-20 mt-3 p-4 items-center justify-center">
+            class="absolute flex flex-col gap-20 mt-3 p-4 items-center justify-end">
             <input
               type="text"
               placeholder="Tanggal Operasi..."
@@ -182,7 +170,7 @@
               placeholder="Nama dokter..."
               class="bg-transparent text-black font-semibold" />
           </div>
-        </section>
+        </div>
       </div>
     </div>
     <!-- JavaScript Anda dapat ditempatkan di sini (jika diperlukan) -->
@@ -219,7 +207,7 @@
             input.style.display = "block";
             img.style.display = "none";
           },
-          500
+          1000
         );
 
         // Saat kursor meninggalkan gambar
