@@ -1,0 +1,248 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OK RS STCAROLUS</title>
+    <!-- Tambahkan link ke stylesheet Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet" />
+    <style>
+      .a4-paper {
+        width: 595px;
+        height: 842px;
+        background-color: white;
+        border: 3px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body class="container mt-3 h-full w-full mx-auto">
+    <div className="flex m-auto">
+      <!-- Konten -->
+      <div class="container mx-auto p-4">
+        <header class="flex justify-between items-center mx-auto w-full p-6">
+          <div class="h-28 w-48"><img src="./img/StCarlous_Logo.png" /></div>
+          <div
+            class="h-24 w-44 bg-transparent border-dashed border-2 border-slate-800 text-center rounded-sm">
+            <h1 class="font-thin justify-center place-items">Barcorde</h1>
+          </div>
+        </header>
+        <!-- Tabel -->
+        <table class="m-auto">
+          <!-- Baris Tabel -->
+          <tbody class="h-32 w-32">
+            <tr>
+              <td class="border">
+                <input
+                  class=""
+                  type="file"
+                  id="file1"
+                  name="file1"
+                  accept="image/*"
+                  onchange="tampilkanGambar('file1', 'gambar1', 'cell1')" />
+                <img
+                  id="gambar1"
+                  src="#"
+                  alt="Gambar 1"
+                  style="max-width: 100%; max-height: 100%; display: none" />
+              </td>
+              <td class="border">
+                <input
+                  type="file"
+                  id="file2"
+                  name="file2"
+                  accept="image/*"
+                  onchange="tampilkanGambar('file2', 'gambar2', 'cell2')" />
+                <img
+                  id="gambar2"
+                  src="#"
+                  alt="Gambar 2"
+                  style="max-width: 100%; max-height: 100%; display: none" />
+              </td>
+              <td class="border">
+                <input
+                  type="file"
+                  id="file3"
+                  name="file3"
+                  accept="image/*"
+                  onchange="tampilkanGambar('file3', 'gambar3', 'cell3')" />
+                <img
+                  id="gambar3"
+                  src="#"
+                  alt="Gambar 3"
+                  style="max-width: 100%; max-height: 100%; display: none" />
+              </td>
+            </tr>
+            <tr>
+              <td class="border">
+                <input
+                  type="file"
+                  id="file4"
+                  name="file4"
+                  accept="image/*"
+                  onchange="tampilkanGambar('file4', 'gambar4', 'cell4')" />
+                <img
+                  id="gambar4"
+                  src="#"
+                  alt="Gambar 4"
+                  style="max-width: 100%; max-height: 100%; display: none" />
+              </td>
+              <td class="border">
+                <input
+                  type="file"
+                  id="file5"
+                  name="file5"
+                  accept="image/*"
+                  onchange="tampilkanGambar('file5', 'gambar5', 'cell5')" />
+                <img
+                  id="gambar5"
+                  src="#"
+                  alt="Gambar 5"
+                  style="max-width: 100%; max-height: 100%; display: none" />
+              </td>
+              <td class="border">
+                <input
+                  type="file"
+                  id="file6"
+                  name="file6"
+                  accept="image/*"
+                  onchange="tampilkanGambar('file6', 'gambar6', 'cell6')" />
+                <img
+                  id="gambar6"
+                  src="#"
+                  alt="Gambar 6"
+                  style="max-width: 100%; max-height: 100%; display: none" />
+              </td>
+            </tr>
+            <tr>
+              <td class="border">
+                <input
+                  type="file"
+                  id="file7"
+                  name="file7"
+                  accept="image/*"
+                  onchange="tampilkanGambar('file7', 'gambar7', 'cell7')" />
+                <img
+                  id="gambar7"
+                  src="#"
+                  alt="Gambar 7"
+                  style="max-width: 100%; max-height: 100%; display: none" />
+              </td>
+              <td class="border">
+                <input
+                  type="file"
+                  id="file8"
+                  name="file8"
+                  accept="image/*"
+                  onchange="tampilkanGambar('file8', 'gambar8', 'cell8')" />
+                <img
+                  id="gambar8"
+                  src="#"
+                  alt="Gambar 8"
+                  style="max-width: 100%; max-height: 100%; display: none" />
+              </td>
+              <td class="border">
+                <input
+                  type="file"
+                  id="file9"
+                  name="file9"
+                  accept="image/*"
+                  onchange="tampilkanGambar('file9', 'gambar9', 'cell9')" />
+                <img
+                  id="gambar9"
+                  src="#"
+                  alt="Gambar 9"
+                  style="max-width: 100%; max-height: 100%; display: none" />
+              </td>
+            </tr>
+            <!-- Tambahkan lebih banyak baris sesuai kebutuhan Anda -->
+          </tbody>
+        </table>
+        <!-- Tombol Cetak -->
+        <button
+          class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-md mb-4"
+          onclick="cetakHalaman()">
+          Cetak
+        </button>
+        <section class="flex justify-end">
+          <div
+            class="absolute flex flex-col gap-20 mt-3 p-4 items-center justify-center">
+            <input
+              type="text"
+              placeholder="Tanggal Operasi..."
+              class="bg-transparent text-black font-semibold" />
+            <input
+              type="text"
+              placeholder="Nama dokter..."
+              class="bg-transparent text-black font-semibold" />
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- JavaScript Anda dapat ditempatkan di sini (jika diperlukan) -->
+    <script>
+      function tampilkanGambar(inputId, imgId, cellId) {
+        const input = document.getElementById(inputId);
+        const img = document.getElementById(imgId);
+        const cell = document.getElementById(cellId);
+
+        if (input.files && input.files[0]) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            img.src = e.target.result;
+            img.style.display = "block";
+            input.classList.add("hidden");
+            cell.style.width = "33%"; // Atur lebar sel menjadi 33% saat gambar ditampilkan
+          };
+          reader.readAsDataURL(input.files[0]);
+        } else {
+          img.style.display = "none";
+          cell.style.width = "33%"; // Atur lebar sel menjadi 33% saat gambar tidak ada
+        }
+      }
+
+      function gantiFoto(inputId, imgId) {
+        const input = document.getElementById(inputId);
+        const img = document.getElementById(imgId);
+        const cell = input.parentElement;
+
+        // Saat kursor diarahkan ke gambar
+        img.addEventListener(
+          "mouseover",
+          function () {
+            input.style.display = "block";
+            img.style.display = "none";
+          },
+          500
+        );
+
+        // Saat kursor meninggalkan gambar
+        img.addEventListener("mouseout", function () {
+          input.style.display = "none";
+          img.style.display = "block";
+        });
+      }
+
+      // Panggil fungsi gantiFoto() untuk setiap pasangan input dan gambar
+      gantiFoto("file1", "gambar1");
+      gantiFoto("file2", "gambar2");
+      gantiFoto("file3", "gambar3");
+      gantiFoto("file4", "gambar4");
+      gantiFoto("file5", "gambar5");
+      gantiFoto("file6", "gambar6");
+      gantiFoto("file7", "gambar7");
+      gantiFoto("file8", "gambar8");
+      gantiFoto("file9", "gambar9");
+
+      function cetakHalaman() {
+        window.print(); // Untuk mencetak halaman
+      }
+    </script>
+  </body>
+</html>
